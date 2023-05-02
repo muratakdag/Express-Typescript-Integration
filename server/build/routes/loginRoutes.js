@@ -9,11 +9,11 @@ router.get('/login', (req, res) => {
     <form method="POST">
       <div>
         <label>Email</label>
-        <input name="email" />
+        <input name="em" />
       </div>
       <div>
         <label>Password</label>
-        <input name="password" type="password" />
+        <input name="pa" type="password" />
       </div>
       <button>Submit</button>
     </form>
@@ -21,5 +21,5 @@ router.get('/login', (req, res) => {
 });
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
-    res.send(email + password);
+    res.send(email.toUpperCase());
 });
